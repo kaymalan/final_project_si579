@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Web Page Content Adjuster",
+    "description": "A chrome extension that adjusts webpage content for OCR analysis",
+    "version": "0.0.1",
+    "icons": {
+      "16": "logo/logo-16.png",
+      "48": "logo/logo-48.png",
+      "128": "logo/logo-128.png"
+    },
+    "options_page": "settings/settings.html",
+    "action": {
+      "default_title": "Web Page Content Adjuster",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "service-worker.js"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["foreground.js"]
+    }],
+    "web_accessible_resources": [{
+      "resources": ["libs/popper.min.js", "libs/bootstrap.min.js", "libs/bootstrap.min.css"],
+      "matches": ["<all_urls>"]
+    }],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }

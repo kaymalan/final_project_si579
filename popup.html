@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Page Content Adjuster</title>
+  <link href="libs/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="container">
+  <div class="row">
+    <h1 class="col">Web Page Content Adjuster</h1>
+  </div>
+</header>
+  <main class="container">
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Change Typeface
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a id="original-option" class="dropdown-item" href="#" data-font="original">Original</a></li>
+        <li><a id="verdana-option" class="dropdown-item" href="#" data-font="Verdana">Verdana</a></li>
+        <li><a id="helvetica-option" class="dropdown-item" href="#" data-font="Helvetica">Helvetica</a></li>
+        <li><a id="atkinson-option" class="dropdown-item" href="#" data-font="Atkinson Hyperlegible">Atkinson Hyperlegible</a></li>
+      </ul>
+    </div>
+    <br/>
+    <label for="customRange3" class="form-label">Font Size</label>
+    <input type="range" class="form-range" min="12" max="24" step="1" id="customRange3">
+    <br/>
+    <div class="d-grid gap-2 d-md-block">
+      <button type="button" class="btn btn-primary" id="replace-button">Remove Italics</button>
+      <button type="button" class="btn btn-primary" id="toggle-underline-button">Remove Underline</button>
+    </div>
+    </br>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="white-bg-switch">
+        <label class="form-check-label" for="whiteBgSwitch">White Background</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="black-text-switch">
+      <label class="form-check-label" for="blackTextSwitch">Black Text</label>
+    </div>
+  </br>
+    <div>
+      <button type="button" class="btn btn-primary" id="toggle-image-visibility">Hide Images</button>
+    </div>
+  </main>
+  <script src="libs/popper.min.js"></script>
+  <script src="libs/bootstrap.min.js"></script>
+  <script src="js/popup.js" defer></script>
+</body>
+</html>
